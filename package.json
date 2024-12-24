@@ -1,12 +1,21 @@
 {
-  "name": "sage-docs",
+  "name": "sage-monorepo",
   "version": "1.0.0",
-  "description": "Documentation for Sage AI Chat Application",
+  "description": "Documentation and Marketing sites for Sage AI Chat Application",
+  "private": true,
+  "workspaces": [
+    "docs",
+    "marketing"
+  ],
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "marketing:dev": "cd marketing && vitepress dev",
+    "marketing:build": "cd marketing && vitepress build",
+    "marketing:preview": "cd marketing && vitepress preview"
   },
   "devDependencies": {
-    "vuepress": "^1.9.10"
+    "vuepress": "^1.9.10",
+    "vitepress": "^1.0.0-rc.31"
   }
 }
